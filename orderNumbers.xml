@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:order xmlns:tns="http://www.example.org/order_assignment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/order_assignment order_assignment.xsd ">
+  <tns:Products>
+    <tns:name>tns:name</tns:name>
+    <tns:description>tns:description</tns:description>
+    <tns:price>0</tns:price>
+    <tns:category>electronics</tns:category>
+  </tns:Products>
+  <tns:customer>
+    <tns:name>tns:name</tns:name>
+    <tns:phone>tns:phone</tns:phone>
+  </tns:customer>
+</tns:order>
