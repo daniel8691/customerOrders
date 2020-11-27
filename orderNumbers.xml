@@ -6,6 +6,18 @@
     <tns:price>0</tns:price>
     <tns:category>electronics</tns:category>
   </tns:Products>
+  <tns:Products>
+    <tns:name>tns:name</tns:name>
+    <tns:description>tns:description</tns:description>
+    <tns:price>0</tns:price>
+    <tns:category>electronics</tns:category>
+  </tns:Products>
+  <tns:Products>
+    <tns:name>tns:name</tns:name>
+    <tns:description>tns:description</tns:description>
+    <tns:price>0</tns:price>
+    <tns:category>electronics</tns:category>
+  </tns:Products>
   <tns:customer>
     <tns:name>tns:name</tns:name>
     <tns:phone>tns:phone</tns:phone>

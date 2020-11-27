@@ -11,6 +11,7 @@
 			<element name="Products" type="tns:Products" minOccurs = "1" maxOccurs="unbounded"/>
 			<element name="customer" type = "tns:customer"/>
 		</sequence>
+		<attribute name="id" type="tns:order_id"></attribute>
 	</complexType>
 	
 	
@@ -21,17 +22,25 @@
 			<element name = "price" type="int"/>
 			<element name = "category" type="tns:CategoryTypes"/>
 		</sequence>	
+		<attribute name="id" type="tns:order_id"></attribute>
 	</complexType>
 	<complexType name="customer">
 		<all>
 			<element name="name" type="string"/>
 			<element name='phone' type = 'string'/>
+			
 		</all>
+		<attribute name="id" type="tns:order_id"></attribute>
 	</complexType>
 	
 	
 	
-	
+	<!-- Set id restriction to have a number limit of 50 -->
+	<simpleType name="order_id">
+		<restriction base="int">
+			<maxInclusive value="50"/>
+		</restriction>
+	</simpleType>
 	
 	<simpleType name = "nameLength">
 		<restriction base='string'>
@@ -54,6 +63,7 @@
 		</restriction>
 	
 	</simpleType>
+	
 
 
 
