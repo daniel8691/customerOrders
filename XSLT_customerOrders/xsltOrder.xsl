@@ -17,12 +17,13 @@
 					<xsl:value-of select="tns:order/@id" />
 				</h3>
 
-				<table>
+				<table border="1">
 					<tr>
 						<th>Product Name</th>
 						<th>Product Description</th>
 						<th>Price</th>
 						<th>Product Category</th>
+						<th>Product Class</th>
 					</tr>
 					<xsl:for-each select="tns:order/tns:Products">
 						<tr>
@@ -38,6 +39,23 @@
 							<td>
 								<xsl:value-of select="tns:category" />
 							</td>
+							<td>
+								<xsl:choose>
+									<xsl:when test="tns:price>=1500">
+										<p>Luxury</p>
+									</xsl:when>
+
+									<xsl:when test="tns:price>=1000">
+										<p>Standard</p>
+									</xsl:when>
+
+									<xsl:otherwise>
+										<p>Cheap</p>
+									</xsl:otherwise>
+
+								</xsl:choose>
+							</td>
+
 
 						</tr>
 					</xsl:for-each>
