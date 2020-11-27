@@ -7,16 +7,24 @@
 		<!-- TODO: Auto-generated template -->
 		<html>
 			<head>
-			
-				<meta charset='utf-8'/>
-			    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
-			    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+
+				<meta charset='utf-8' />
+				<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<!-- CSS -->
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
-				
+				<link rel="stylesheet"
+					href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+					integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+					crossorigin="anonymous" />
+
 				<!-- jQuery and JS bundle w/ Popper.js -->
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+					integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+					crossorigin="anonymous"></script>
+				<script
+					src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+					integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+					crossorigin="anonymous"></script>
 				<title>Customer Order Info</title>
 			</head>
 			<body>
@@ -38,7 +46,10 @@
 						<th>Product Category</th>
 						<th>Product Class</th>
 					</tr>
+					<!-- Iterate through products within the order using for-each -->
 					<xsl:for-each select="tns:order/tns:Products">
+						<!-- Sort the table values by the price in descending order -->
+						<xsl:sort select="tns:price" data-type="number" order="descending" />
 						<tr>
 							<td>
 								<xsl:value-of select="tns:name" />
@@ -73,9 +84,43 @@
 						</tr>
 					</xsl:for-each>
 				</table>
+				<div class="jumbotron jumbotron-fluid m-xs-3 p-xs-1 m-sm-5 p-sm-5">
+				<h2 style="text-align:center;">Calling elements using XPath</h2>
+				<xsl:apply-templates />
+				</div>
+
 			</body>
 		</html>
 
-
 	</xsl:template>
+	
+	<xsl:template match="tns:customer">
+		<b>
+			Customer Name:
+			<xsl:value-of select="." />
+		</b>
+	</xsl:template>
+	
+	
+	<xsl:template match="tns:Products">
+		<b>
+			Order ID:
+			<xsl:value-of select="../@id" />
+		</b>
+		<p>
+			Product:
+			<xsl:value-of select="./tns:name" />
+			<br/>
+			Price:
+			<xsl:value-of select="./tns:price" />
+			<xsl:if test="tns:price &gt; 500">
+				(eligible for free shipping)
+			</xsl:if>
+			<xsl:if test="tns:price &lt; 500">
+				(free shipping for products priced higher than 500)
+			</xsl:if>
+
+		</p>
+	</xsl:template>
+
 </xsl:stylesheet>
