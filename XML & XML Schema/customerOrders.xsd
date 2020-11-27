@@ -25,12 +25,7 @@
 	
 
 	
-	<!-- added character length restriction for the product name -->
-	<simpleType name = "nameLength">
-		<restriction base='string'>
-			<maxLength value="20"></maxLength>
-		</restriction>
-	</simpleType>
+
 	
 
 	

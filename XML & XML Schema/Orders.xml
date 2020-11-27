@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tns:order id="0" xmlns:tns="http://www.danieltsai.com/customerOrders" 
-	xmlns:tns1="http://www.danieltsai.com/commonID" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tns1="http://www.danieltsai.com/commonID" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.danieltsai.com/customerOrders customerOrders.xsd ">
 
    <tns:Products>
