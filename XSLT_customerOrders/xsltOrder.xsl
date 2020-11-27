@@ -85,23 +85,33 @@
 					</xsl:for-each>
 				</table>
 				<div class="jumbotron jumbotron-fluid m-xs-3 p-xs-1 m-sm-5 p-sm-5">
-				<h2 style="text-align:center;">Calling elements using XPath</h2>
-				<xsl:apply-templates />
+					<h2 style="text-align:center;">Calling elements using XPath</h2>
+					<xsl:apply-templates />
+					<br />
+					<p>
+						Total number of items in the order:
+						<xsl:value-of select="count(/tns:order/tns:Products)" />
+					</p>
+					<p>
+						Total price of the order:
+						<xsl:value-of select="sum(/tns:order/tns:Products/tns:price)" />
+					</p>
 				</div>
 
 			</body>
 		</html>
 
 	</xsl:template>
-	
+
 	<xsl:template match="tns:customer">
-		<b>
-			Customer Name:
+		<b>Customer Name &amp; Phone Number:</b>
+		<p>
 			<xsl:value-of select="." />
-		</b>
+		</p>
+
 	</xsl:template>
-	
-	
+
+
 	<xsl:template match="tns:Products">
 		<b>
 			Order ID:
@@ -110,7 +120,7 @@
 		<p>
 			Product:
 			<xsl:value-of select="./tns:name" />
-			<br/>
+			<br />
 			Price:
 			<xsl:value-of select="./tns:price" />
 			<xsl:if test="tns:price &gt; 500">
