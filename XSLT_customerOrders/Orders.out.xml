@@ -1,0 +1,25 @@
+<html xmlns:tns="http://www.danieltsai.com/customerOrders" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns1="http://www.danieltsai.com/commonID">
+<body>
+<h2>Order Information</h2>
+<h3>
+					Customer Name:
+					Daniel</h3>
+<h3>
+					Customer ID:
+					0</h3>
+<table>
+<tr>
+<th>Product Name</th><th>Product Description</th><th>Price</th><th>Product Category</th>
+</tr>
+<tr>
+<td>iPhone</td><td>phone</td><td>1000</td><td>electronics</td>
+</tr>
+<tr>
+<td>Macbook</td><td>laptop</td><td>3000</td><td>electronics</td>
+</tr>
+<tr>
+<td>UltraBoost</td><td>running shoes</td><td>200</td><td>shoes</td>
+</tr>
+</table>
+</body>
+</html>
