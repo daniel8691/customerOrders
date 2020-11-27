@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.danieltsai.com/customerOrders" 
+	xmlns:tns="http://www.danieltsai.com/customerOrders" 
+	xmlns:commonIDs="http://www.danieltsai.com/commonID"
+	elementFormDefault="qualified">
+			
+	<include schemaLocation="productsAndCustomers.xsd"/>
+	
+	<import schemaLocation="commonID.xsd" namespace="http://www.danieltsai.com/commonID"/>
+	
+	<element name = "order" type="tns:Orders"/>
+	<complexType name="Orders">
+		<sequence>
+			<element name="Products" type="tns:Products" minOccurs = "1" maxOccurs="unbounded"/>
+			<element name="customer" type = "tns:customer"/>
+		</sequence>
+		<attribute name="id" type="commonIDs:order_id" use="required"/>
+	</complexType>
+	
+	
+	
+	
+	
+	
+
+	
+	<!-- added character length restriction for the product name -->
+	<simpleType name = "nameLength">
+		<restriction base='string'>
+			<maxLength value="20"></maxLength>
+		</restriction>
+	</simpleType>
+	
+
+	
+
+
+
+
+
+</schema>

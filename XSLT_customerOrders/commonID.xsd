@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.danieltsai.com/commonID" 
+		xmlns:tns="http://www.danieltsai.com/commonID" 
+			elementFormDefault="qualified">
+	
+	<!-- Set id restriction to have a number limit of 50 -->
+	<simpleType name="order_id">
+		<restriction base="int">
+			<maxInclusive value="50"/>
+		</restriction>
+	</simpleType>
+
+
+</schema>
