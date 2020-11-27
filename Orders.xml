@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:order id="0" xmlns:tns="http://www.danieltsai.com/customerOrders" 
+	xmlns:tns1="http://www.danieltsai.com/commonID" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.danieltsai.com/customerOrders customerOrders.xsd ">
+
+   <tns:Products>
+    <tns:name>iPhone</tns:name>
+    <tns:description>phone</tns:description>
+    <tns:price>1000</tns:price>
+    <tns:category>electronics</tns:category>
+  </tns:Products>
+  <tns:Products>
+    <tns:name>Macbook</tns:name>
+    <tns:description>laptop</tns:description>
+    <tns:price>3000</tns:price>
+    <tns:category>electronics</tns:category>
+  </tns:Products>
+  <tns:Products>
+    <tns:name>UltraBoost</tns:name>
+    <tns:description>running shoes</tns:description>
+    <tns:price>200</tns:price>
+    <tns:category>shoes</tns:category>
+  </tns:Products>
+  <tns:customer>
+    <tns:name>Daniel</tns:name>
+    <tns:phone>1234567890</tns:phone>
+  </tns:customer>
+</tns:order>

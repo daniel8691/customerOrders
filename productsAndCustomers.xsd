@@ -4,7 +4,7 @@
 		xmlns:tns="http://www.danieltsai.com/customerOrders" 
 			elementFormDefault="qualified">
 	
-	<!-- <import schemaLocation="customerOrders.xsd" namespace="http://www.danieltsai.com/customerOrders" /> -->
+
 			
 	<complexType name = "Products">
 		<sequence>
