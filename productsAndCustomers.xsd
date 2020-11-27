@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.danieltsai.com/customerOrders" 
+		xmlns:tns="http://www.danieltsai.com/customerOrders" 
+			elementFormDefault="qualified">
+			
+	<complexType name = "Products">
+		<sequence>
+			<element name = "name" type="tns:descriptionLength"/>
+			<element name = "description" type="tns:descriptionLength"/>
+			<element name = "price" type="int"/>
+			<element name = "category" type="tns:CategoryTypes"/>
+		</sequence>	
+		<attribute name="id" type="tns:order_id"/>
+	</complexType>
+	
+	
+	<complexType name="customer">
+		<all>
+			<element name="name" type="string"/>
+			<element name='phone' type = 'string'/>
+			
+		</all>
+		<attribute name="id" type="tns:order_id"/>
+	</complexType>			
+			
+			
+			
+</schema>
