@@ -1,3 +1,21 @@
 # customerOrders_xsl_Xml
 
-The html file can be accessed through [this link](https://dataviz-class-1-dt.s3.us-east-2.amazonaws.com/customerOrders.html) 
+The html file can be accessed through [this link](https://dataviz-class-1-dt.s3.us-east-2.amazonaws.com/customerOrders.html). 
+<br>
+
+I used this project as an opportunity to learn a new programming language. The various programs used for this project are:
+* XML Schema
+* XML
+* XSLT
+* HTML
+
+No raw data were used for this projects. I made up the "customer orders" as placeholders to test the useability of my codes. 
+
+## Process
+
+#### XML Schema
+I first used XML schema to lay out the structure of the XML document. Using complexTypes, I created the required information for each order using the **sequence** element. In this case, the restrictions are the product information (ie. product name, product description, price, and category), the customer name and phone number. Additional restrictions for each product information inputs are set using **simpleTypes**, which limited the length of characters for the inputs, and allowed only fixed inputs, using the **enumeration elements**, for the product categories
+
+I created a separate schema for the product and customer information and stored a common simpleType restriction in a separate namespace. I then joined the three schemas using **include** and **import** elements. Once the XML structure was built, I inputted a list of product information myself, and transformed the XML document called **Orders.xml**, using **XSLT**, into a **HTML** file. 
+
+#### XSLT
